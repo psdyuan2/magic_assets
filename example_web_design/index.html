@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>芝麻铺 · 柴犬生活柜台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+SC:wght@400;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fx.css">
+  <link rel="stylesheet" href="assets/cycle.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#shop">跳到店面</a>
+
+  <header class="noren">
+    <div class="noren-rod" aria-hidden="true"></div>
+    <p class="noren-mark">芝麻铺</p>
+    <nav class="tabs" aria-label="店面分区">
+      <a class="tab is-current" href="#shop" data-tab="shop">
+        <span class="ma-fx" data-ma-fx="pop" data-ma-trigger="mount">
+          <img class="pixel-icon" src="assets/icons/kennel.svg" alt="" width="26" height="26">
+        </span>
+        铺面
+      </a>
+      <a class="tab" href="#shelf" data-tab="shelf">
+        <span class="ma-fx" data-ma-fx="pop" data-ma-trigger="mount" style="--ma-delay: 80ms">
+          <img class="pixel-icon" src="assets/icons/bone.svg" alt="" width="26" height="26">
+        </span>
+        货架
+      </a>
+      <a class="tab" href="#walk" data-tab="walk">
+        <span class="ma-fx" data-ma-fx="pop" data-ma-trigger="mount" style="--ma-delay: 160ms">
+          <img class="pixel-icon" src="assets/icons/paw.svg" alt="" width="26" height="26">
+        </span>
+        遛弯
+      </a>
+      <a class="tab" href="#bench" data-tab="bench">
+        <span class="ma-fx" data-ma-fx="pop" data-ma-trigger="mount" style="--ma-delay: 240ms">
+          <img class="pixel-icon" src="assets/icons/badge.svg" alt="" width="26" height="26">
+        </span>
+        会员
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="shop" id="shop">
+      <aside class="stamp" aria-hidden="true">
+        <span>芝麻铺</span>
+        <small>SESAME</small>
+      </aside>
+
+      <div class="mascot">
+        <span class="ma-fx" data-ma-fx="bob" data-ma-trigger="loop" style="--ma-distance: 6px; --ma-duration: 2.4s">
+          <div class="shiba-zoom">
+            <div class="pixel-cycle" role="img" aria-label="店犬芝麻坐着喘气，偶尔眨眼"></div>
+          </div>
+        </span>
+        <div class="counter" aria-hidden="true"></div>
+      </div>
+
+      <div class="shop-voice">
+        <h1>芝麻铺</h1>
+        <p>柜台后那只在喘气的，是店长。</p>
+      </div>
+
+      <aside class="ticket" id="walk">
+        <p class="ticket-kicker">今日遛弯</p>
+        <p>三点半，街口银杏树下转一圈。回来有新鸡胸。</p>
+      </aside>
+    </section>
+
+    <section class="shelf" id="shelf" aria-labelledby="shelf-title">
+      <div class="shelf-head">
+        <h2 id="shelf-title">今日上柜</h2>
+        <p>按心情拿，不按套餐。</p>
+      </div>
+      <div class="plank" aria-hidden="true"></div>
+      <ul class="goods">
+        <li class="good good--wide">
+          <img class="pixel-icon" src="assets/icons/kibble.svg" alt="" width="52" height="52">
+          <h3>主粮</h3>
+          <p>芝麻成犬粮</p>
+          <span>适口，不添香精</span>
+        </li>
+        <li class="good good--narrow">
+          <img class="pixel-icon" src="assets/icons/treat.svg" alt="" width="52" height="52">
+          <h3>零食</h3>
+          <p>风干鸡胸</p>
+          <span>出门装一口袋</span>
+        </li>
+        <li class="good">
+          <img class="pixel-icon" src="assets/icons/ball.svg" alt="" width="52" height="52">
+          <h3>玩具</h3>
+          <p>网球耐咬款</p>
+          <span>院子里抛十次</span>
+        </li>
+        <li class="good good--tall">
+          <img class="pixel-icon" src="assets/icons/sweater.svg" alt="" width="52" height="52">
+          <h3>衣服</h3>
+          <p>骨头纹毛衣</p>
+          <span>换季第一件</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bench" id="bench" aria-labelledby="bench-title">
+      <div class="bench-copy">
+        <p class="bench-kicker">会员工作台</p>
+        <h2 id="bench-title">项圈绣字，三天取</h2>
+        <p>颜色、扣具、名字都在这一条台上定。不做商城里那种套餐卡。</p>
+      </div>
+
+      <form class="order" id="collar-form">
+        <label>
+          绣字
+          <input id="collar-name" name="name" maxlength="6" value="芝麻" autocomplete="off">
+        </label>
+
+        <fieldset>
+          <legend>皮色</legend>
+          <label><input type="radio" name="color" value="sesame" checked> <i class="swatch swatch--sesame" aria-hidden="true"></i> 芝麻</label>
+          <label><input type="radio" name="color" value="persimmon"> <i class="swatch swatch--persimmon" aria-hidden="true"></i> 柿子</label>
+          <label><input type="radio" name="color" value="ink"> <i class="swatch swatch--ink" aria-hidden="true"></i> 墨色</label>
+          <label><input type="radio" name="color" value="moss"> <i class="swatch swatch--moss" aria-hidden="true"></i> 苔绿</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>扣具</legend>
+          <label><input type="radio" name="clasp" value="bone" checked> 骨头扣</label>
+          <label><input type="radio" name="clasp" value="metal"> 铜环</label>
+          <label><input type="radio" name="clasp" value="wood"> 木栓</label>
+        </fieldset>
+
+        <button type="submit">
+          <span class="ma-fx" data-ma-fx="pulse" data-ma-trigger="loop" style="--ma-scale: 1.04">
+            记一笔
+          </span>
+        </button>
+      </form>
+
+      <figure class="plate" aria-live="polite">
+        <div class="collar" data-color="sesame">
+          <img class="pixel-icon" src="assets/icons/badge.svg" alt="" width="32" height="32">
+          <span class="collar-name">芝麻</span>
+        </div>
+        <figcaption>
+          <span class="plate-color">芝麻皮</span>
+          ·
+          <span class="plate-clasp">骨头扣</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <p>芝麻铺 · 今日打烊 20:00 · 只做柴犬生活</p>
+  </footer>
+
+  <p class="order-note" id="order-note" hidden>记下了。三天后柜台取。</p>
+
+  <script src="assets/fx.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

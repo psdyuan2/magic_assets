@@ -1,0 +1,12 @@
+.pixel-cycle {
+  width: 298px;
+  height: 349px;
+  background: url("strip.png") 0 0 no-repeat;
+  background-size: 1788px 349px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  animation: pixel-cycle-steps 960ms steps(6) infinite;
+}
+@keyframes pixel-cycle-steps {
+  to { background-position: -1788px 0; }
+}

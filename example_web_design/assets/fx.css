@@ -1,0 +1,105 @@
+/* magic-assets script FX. No image2. Transform / opacity / filter / clip-path only. */
+.ma-fx {
+  --ma-duration: 600ms;
+  --ma-delay: 0ms;
+  --ma-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ma-scale: 1.08;
+  --ma-scale-x: 1.1;
+  --ma-scale-y: 0.9;
+  --ma-distance: 8px;
+  --ma-flash: 2.2;
+  --ma-saturate: 1.25;
+  --ma-hue: 40deg;
+  --ma-iris: 80%;
+  display: inline-block;
+  transform-origin: center center;
+  will-change: transform, opacity, filter, clip-path;
+}
+.ma-fx > img,
+.ma-fx > svg {
+  display: block;
+}
+.ma-fx--bob {
+  --ma-duration: 1.6s;
+  --ma-ease: ease-in-out;
+  --ma-distance: 8px;
+}
+.ma-fx--bob.ma-fx-loop {
+  animation: ma-fx-bob var(--ma-duration) var(--ma-ease) var(--ma-delay) infinite;
+}
+.ma-fx--bob.is-playing {
+  animation: ma-fx-bob var(--ma-duration) var(--ma-ease) var(--ma-delay) infinite;
+}
+@keyframes ma-fx-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(calc(var(--ma-distance) * -1)); }
+}
+.ma-fx--pulse {
+  --ma-duration: 1.2s;
+  --ma-ease: ease-in-out;
+  --ma-scale: 1.06;
+}
+.ma-fx--pulse.ma-fx-loop {
+  animation: ma-fx-pulse var(--ma-duration) var(--ma-ease) var(--ma-delay) infinite;
+}
+.ma-fx--pulse.is-playing {
+  animation: ma-fx-pulse var(--ma-duration) var(--ma-ease) var(--ma-delay) infinite;
+}
+@keyframes ma-fx-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(var(--ma-scale)); }
+}
+.ma-fx--pop {
+  --ma-duration: 480ms;
+  --ma-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ma-scale: 1.08;
+}
+.ma-fx--pop:not(.is-playing):not(.ma-fx-loop) {
+  opacity: 0; transform: scale(0.45);
+}
+.ma-fx--pop.is-playing {
+  animation: ma-fx-pop var(--ma-duration) var(--ma-ease) var(--ma-delay) both;
+}
+@keyframes ma-fx-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.45);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(var(--ma-scale));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.ma-fx--fade-in {
+  --ma-duration: 400ms;
+  --ma-ease: ease-out;
+}
+.ma-fx--fade-in:not(.is-playing):not(.ma-fx-loop) {
+  opacity: 0;
+}
+.ma-fx--fade-in.is-playing {
+  animation: ma-fx-fade-in var(--ma-duration) var(--ma-ease) var(--ma-delay) both;
+}
+@keyframes ma-fx-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ma-fx {
+    animation: none !important;
+    filter: none !important;
+    clip-path: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .ma-fx--bob,
+  .ma-fx--pulse,
+  .ma-fx--pop,
+  .ma-fx--fade-in {
+    animation: none !important;
+  }
+}

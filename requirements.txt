@@ -1,0 +1,1 @@
+-r .cursor/skills/magic-assets/requirements.txt

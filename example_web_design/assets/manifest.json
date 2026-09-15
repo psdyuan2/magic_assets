@@ -1,0 +1,203 @@
+{
+  "created_at": "2026-09-12T14:05:26.469714+00:00",
+  "mode": "pixel-anim",
+  "count": 4,
+  "chroma": "#FF00FF",
+  "sampled_chroma": "#F103E4",
+  "quality": "medium",
+  "size": "1024x1024",
+  "assets": [
+    {
+      "name": "01-idle",
+      "png": "01-idle.png",
+      "preview": "01-idle.png",
+      "logical": [
+        298,
+        349
+      ],
+      "index": 1,
+      "sheet": {
+        "mode": "cut",
+        "cut": "guide-box",
+        "register": "stage",
+        "family_size": [
+          298,
+          349
+        ],
+        "palette_size": 65493,
+        "palette": [
+          "#030302",
+          "#060A06",
+          "#080304",
+          "#080402",
+          "#080904",
+          "#0A0402",
+          "#0A0607",
+          "#0A0805",
+          "#0A0806",
+          "#0A0807",
+          "#0A080A",
+          "#0B0807",
+          "#0B0907",
+          "#0B0B0A",
+          "#0C0706",
+          "#0C0805",
+          "#0C0808",
+          "#0C0B08",
+          "#0C0E0C",
+          "#0D0402",
+          "#0D0508",
+          "#0D0A07",
+          "#0D0A0B",
+          "#0D0B06",
+          "#0D0B0A",
+          "#0D0D0B",
+          "#0E0705",
+          "#0E0806",
+          "#0E090C",
+          "#0E0A07",
+          "#0E0C09",
+          "#0F0802",
+          "#0F0906",
+          "#0F0B0D",
+          "#0F0C07",
+          "#0F0D09",
+          "#0F0E08",
+          "#100500",
+          "#100B05",
+          "#100B06",
+          "#100C06",
+          "#100C07",
+          "#100E07",
+          "#100E0C",
+          "#100F08",
+          "#100F0B",
+          "#10100B",
+          "#10100C"
+        ],
+        "boxes": [
+          [
+            76,
+            69,
+            461,
+            477
+          ],
+          [
+            556,
+            70,
+            941,
+            477
+          ],
+          [
+            76,
+            549,
+            461,
+            957
+          ],
+          [
+            556,
+            549,
+            941,
+            957
+          ]
+        ],
+        "kind": "pixel-cycle",
+        "refine": "light",
+        "character": "One sitting Shiba Inu, three-quarter view facing right: compact round body, sesame-cream coat, rust-orange ears and cheeks, white muzzle and chest blaze, curled cream tail over the back, two small black oval eyes, dark brown nose, closed mouth. Chunky pixel dog mascot, no collar, no accessories, no props.",
+        "action": "idle",
+        "beats": [
+          "sit rest, ears upright, eyes open",
+          "soft inhale, chest a little taller, left ear flicks",
+          "tiny head tilt right, one blink",
+          "settle back toward the sit rest so the loop can restart"
+        ],
+        "frames": 4,
+        "playable_frames": 6,
+        "frame_ms": 160,
+        "holds": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "loop": "cycle",
+        "stabilize_x": [
+          2,
+          0,
+          -10,
+          0
+        ],
+        "jitter": {
+          "x_span": 5.0,
+          "y_span": 5.0,
+          "feet_span": 1
+        },
+        "sprite": 40,
+        "strip": "strip.png",
+        "gif": "cycle.gif",
+        "preview_gif": "cycle.gif",
+        "css": "cycle.css",
+        "preview": "preview.html"
+      }
+    },
+    {
+      "name": "02-idle",
+      "png": "02-idle.png",
+      "preview": "02-idle.png",
+      "logical": [
+        298,
+        349
+      ],
+      "index": 2
+    },
+    {
+      "name": "03-idle",
+      "png": "03-idle.png",
+      "preview": "03-idle.png",
+      "logical": [
+        298,
+        349
+      ],
+      "index": 3
+    },
+    {
+      "name": "04-idle",
+      "png": "04-idle.png",
+      "preview": "04-idle.png",
+      "logical": [
+        298,
+        349
+      ],
+      "index": 4
+    }
+  ],
+  "revised_prompt": null,
+  "grid": {
+    "cols": 2,
+    "rows": 2,
+    "size": "1024x1024"
+  },
+  "character": "One sitting Shiba Inu, three-quarter view facing right: compact round body, sesame-cream coat, rust-orange ears and cheeks, white muzzle and chest blaze, curled cream tail over the back, two small black oval eyes, dark brown nose, closed mouth. Chunky pixel dog mascot, no collar, no accessories, no props.",
+  "action": "idle",
+  "beats": [
+    "sit rest, ears upright, eyes open",
+    "soft inhale, chest a little taller, left ear flicks",
+    "tiny head tilt right, one blink",
+    "settle back toward the sit rest so the loop can restart"
+  ],
+  "style": "True pixel art sprites, not a filtered photo. Hard nearest-neighbor squares only. No anti-aliasing, no blur, no gradients, no motion blur, no smear frames. Limited shared palette: sesame cream, rust orange, white blaze, ink navy, warm graphite. Never use magenta, electric cyan, the chroma-key color, or the guide-box color.",
+  "sprite": 40,
+  "texel": 0,
+  "colors": 12,
+  "register": "stage",
+  "snap": false,
+  "frame_ms": 160,
+  "holds": [
+    2,
+    1,
+    1,
+    2
+  ],
+  "loop": "cycle",
+  "stabilize_x": true
+}
