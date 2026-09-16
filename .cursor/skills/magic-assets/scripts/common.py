@@ -5,14 +5,12 @@ from __future__ import annotations
 import base64
 import colorsys
 import json
-import os
 import sys
 from datetime import datetime, timezone
 from io import BytesIO
 from pathlib import Path
 
 import requests
-from dotenv import load_dotenv
 from PIL import Image, ImageFilter
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
@@ -25,7 +23,7 @@ def resolve_project_root() -> Path:
     for candidate in [cwd, *cwd.parents]:
         if candidate == Path.home():
             break
-        if (candidate / ".env").exists() or (candidate / ".git").exists():
+        if (candidate / ".git").exists():
             return candidate
 
     parts = SKILL_ROOT.parts
@@ -53,15 +51,29 @@ GRID_LAYOUTS = {
     16: (4, 4, "2048x2048"),
 }
 
+SETTINGS_PATH = SKILL_ROOT / "ma_settings.json"
+
 
 def load_settings() -> tuple[str, str, str]:
-    load_dotenv(ROOT / ".env")
-    api_key = os.environ.get("PACKY_IMAGE_API_KEY", "").strip()
-    base_url = os.environ.get("PACKY_IMAGE_BASE_URL", "https://cf.api.fan/v1").rstrip("/")
-    model = os.environ.get("PACKY_IMAGE_MODEL", "gpt-image-2").strip() or "gpt-image-2"
-    if not api_key:
-        sys.exit("missing PACKY_IMAGE_API_KEY in .env")
-    return api_key, base_url, model
+    if not SETTINGS_PATH.exists():
+        sys.exit(f"missing {SETTINGS_PATH.name} in the skill folder")
+    try:
+        data = json.loads(SETTINGS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as error:
+        sys.exit(f"invalid {SETTINGS_PATH.name}: {error}")
+    if not isinstance(data, dict):
+        sys.exit(f"{SETTINGS_PATH.name} must be a JSON object")
+    endpoint = str(data.get("endpoint") or "").strip().rstrip("/")
+    api_key = str(data.get("apikey") or "").strip()
+    model_name = str(data.get("model_name") or "").strip()
+    missing = [
+        name
+        for name, value in (("endpoint", endpoint), ("apikey", api_key), ("model_name", model_name))
+        if not value
+    ]
+    if missing:
+        sys.exit(f"missing {', '.join(missing)} in {SETTINGS_PATH.name}")
+    return api_key, endpoint, model_name
 
 
 def load_brief(path: str) -> dict:

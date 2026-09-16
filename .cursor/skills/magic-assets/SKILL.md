@@ -48,7 +48,7 @@ Prompts stay path-specific. Guide-box crop, chroma key, trim, naming, `manifest.
 - Every raster asset is wrapped in a closed 2px `#00FFFF` box. Scripts crop the interiors, then drop cyan and magenta. Old sheets without boxes fall back to equal cells or blobs.
 - Never put magenta / fuchsia or electric cyan on the objects themselves.
 - No text, labels, watermarks, desks, or extra frames. The cyan boxes are the only allowed frames.
-- This skill is self-contained. Scripts live in this folder (`run.py`, `scripts/`). Load the **host** `.env` (`PACKY_IMAGE_API_KEY`, `PACKY_IMAGE_BASE_URL`).
+- This skill is self-contained. Scripts live in this folder (`run.py`, `scripts/`). Read `ma_settings.json` in this folder (`endpoint`, `apikey`, `model_name`).
 - Output lands in the host `output/`, never inside the skill folder.
 - High-res jobs can take ~2 minutes. The client already retries and bypasses proxies.
 
@@ -74,8 +74,8 @@ Copy this whole folder. Do not copy repo-root leftovers.
 
 1. Place it at `<app>/.cursor/skills/magic-assets/`.
 2. `pip install -r .cursor/skills/magic-assets/requirements.txt`
-3. Copy keys from `.env.example` into the **host** `<app>/.env`.
-4. Run `run.py` from `<app>/`. `.env` and `output/` stay in the host app.
+3. Fill in `.cursor/skills/magic-assets/ma_settings.json` (`endpoint`, `apikey`, `model_name`).
+4. Run `run.py` from `<app>/`. `output/` stays in the host app.
 
 ## After generate
 

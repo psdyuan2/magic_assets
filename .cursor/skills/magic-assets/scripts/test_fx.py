@@ -13,7 +13,7 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
-from common import PROJECT_ROOT, SKILL_ROOT
+from common import PROJECT_ROOT, SETTINGS_PATH, SKILL_ROOT
 from fx import (
     EFFECTS,
     FAMILY_ORDER,
@@ -34,7 +34,8 @@ class ScriptFxTests(unittest.TestCase):
         self.assertTrue((SKILL_ROOT / "run.py").exists())
         self.assertTrue((SKILL_ROOT / "requirements.txt").exists())
         self.assertNotEqual(PROJECT_ROOT, SKILL_ROOT)
-        self.assertTrue((PROJECT_ROOT / ".env").exists() or (PROJECT_ROOT / ".git").exists())
+        self.assertEqual(SETTINGS_PATH, SKILL_ROOT / "ma_settings.json")
+        self.assertTrue((PROJECT_ROOT / ".git").exists() or PROJECT_ROOT == SKILL_ROOT.parents[2])
 
     def test_catalog_covers_five_families(self) -> None:
         families = {effect.family for effect in EFFECTS.values()}
