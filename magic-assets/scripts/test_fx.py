@@ -33,6 +33,7 @@ class ScriptFxTests(unittest.TestCase):
         self.assertTrue((SKILL_ROOT / "SKILL.md").exists())
         self.assertTrue((SKILL_ROOT / "run.py").exists())
         self.assertTrue((SKILL_ROOT / "requirements.txt").exists())
+        self.assertTrue((SKILL_ROOT / "references" / "fx.md").exists())
         self.assertNotEqual(PROJECT_ROOT, SKILL_ROOT)
         self.assertEqual(SETTINGS_PATH, SKILL_ROOT / "ma_settings.json")
         self.assertTrue((PROJECT_ROOT / ".git").exists() or PROJECT_ROOT == SKILL_ROOT.parents[2])

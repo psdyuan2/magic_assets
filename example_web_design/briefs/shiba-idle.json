@@ -1,0 +1,18 @@
+{
+  "frames": 4,
+  "sprite": 40,
+  "action": "idle",
+  "character": "One sitting Shiba Inu, three-quarter view facing right: compact round body, sesame-cream coat, rust-orange ears and cheeks, white muzzle and chest blaze, curled cream tail over the back, two small black oval eyes, dark brown nose, closed mouth. Chunky pixel dog mascot, no collar, no accessories, no props.",
+  "beats": [
+    "sit rest, ears upright, eyes open",
+    "soft inhale, chest a little taller, left ear flicks",
+    "tiny head tilt right, one blink",
+    "settle back toward the sit rest so the loop can restart"
+  ],
+  "style": "True pixel art sprites, not a filtered photo. Hard nearest-neighbor squares only. No anti-aliasing, no blur, no gradients, no motion blur, no smear frames. Limited shared palette: sesame cream, rust orange, white blaze, ink navy, warm graphite. Never use magenta, electric cyan, the chroma-key color, or the guide-box color.",
+  "register": "stage",
+  "frame_ms": 160,
+  "holds": "2,1,1,2",
+  "loop": "cycle",
+  "quality": "medium"
+}

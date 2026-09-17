@@ -1,0 +1,8 @@
+{
+  "count": 8,
+  "names": ["kennel", "bone", "paw", "badge", "kibble", "treat", "ball", "sweater"],
+  "style": "True pixel art sprites, not a filtered photo. Each icon is a small integer texel drawing shown as chunky nearest-neighbor squares. Hard edges only. No anti-aliasing, no blur, no gradients, no soft shadows. Limited shared palette: sesame cream, rust orange, white blaze, ink navy, moss green, warm graphite. Puppy-shop objects only. Never use magenta, electric cyan, the chroma-key color, or the guide-box color.",
+  "logical": 0,
+  "colors": 12,
+  "quality": "medium"
+}

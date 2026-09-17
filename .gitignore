@@ -1,5 +1,5 @@
 .env
-.cursor/skills/magic-assets/ma_settings.json
+magic-assets/ma_settings.json
 output/
 __pycache__/
 *.pyc
@@ -7,4 +7,4 @@ __pycache__/
 .venv/
 web/
 station/
-briefs/
+/briefs/

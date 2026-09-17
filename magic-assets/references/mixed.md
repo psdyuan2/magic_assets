@@ -35,7 +35,7 @@ Prefer the cyan boxes: largest interior is the hero, remaining boxes keep readin
 If only the cut is wrong, re-run:
 
 ```bash
-python3 .cursor/skills/magic-assets/run.py mixed --skip-generate --sheet output/mixed-sheet-xxx/sheet.png --hero console-front --small joystick,gamepad,cartridge,dpad,headset
+python3 magic-assets/run.py mixed --skip-generate --sheet output/mixed-sheet-xxx/sheet.png --hero console-front --small joystick,gamepad,cartridge,dpad,headset
 ```
 
 ## Brief example

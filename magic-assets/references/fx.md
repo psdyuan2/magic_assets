@@ -65,9 +65,9 @@ Tune with variables: `--ma-duration`, `--ma-delay`, `--ma-scale`, `--ma-distance
 ## Commands
 
 ```bash
-python3 .cursor/skills/magic-assets/run.py fx
-python3 .cursor/skills/magic-assets/run.py fx --effects pulse,bob,flash,pop
-python3 .cursor/skills/magic-assets/run.py test fx
+python3 magic-assets/run.py fx
+python3 magic-assets/run.py fx --effects pulse,bob,flash,pop
+python3 magic-assets/run.py test fx
 ```
 
 ## Brief example

@@ -1,1 +1,1 @@
--r .cursor/skills/magic-assets/requirements.txt
+-r magic-assets/requirements.txt

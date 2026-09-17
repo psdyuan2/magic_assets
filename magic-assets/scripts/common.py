@@ -31,6 +31,9 @@ def resolve_project_root() -> Path:
         host = SKILL_ROOT.parents[2]
         if host != Path.home():
             return host
+    # This repository keeps the skill at <repo>/magic-assets.
+    if SKILL_ROOT.name == "magic-assets" and SKILL_ROOT.parent != Path.home():
+        return SKILL_ROOT.parent
     return cwd
 
 

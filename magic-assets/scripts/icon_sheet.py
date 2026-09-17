@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Back-compat dispatcher. Prefer ../run.py from the host project root."""
+"""Back-compat dispatcher. Prefer magic-assets/run.py from the host project root."""
 
 from __future__ import annotations
 

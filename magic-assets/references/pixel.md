@@ -45,9 +45,9 @@ image2 still paints anti-aliased “fake pixels”. Post-process is mandatory:
 ## Commands
 
 ```bash
-python3 .cursor/skills/magic-assets/run.py pixel --count 4 --colors 12
-python3 .cursor/skills/magic-assets/run.py pixel --skip-generate --sheet output/pixel-sheet-4-xxx/sheet.png --count 4
-python3 .cursor/skills/magic-assets/run.py test pixel
+python3 magic-assets/run.py pixel --count 4 --colors 12
+python3 magic-assets/run.py pixel --skip-generate --sheet output/pixel-sheet-4-xxx/sheet.png --count 4
+python3 magic-assets/run.py test pixel
 ```
 
 ## Brief example

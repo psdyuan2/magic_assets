@@ -62,11 +62,11 @@ Do **not** snap, majority-vote, merge the palette, or emit rect SVG unless the u
 ## Commands
 
 ```bash
-python3 .cursor/skills/magic-assets/run.py pixel-anim --action idle
-python3 .cursor/skills/magic-assets/run.py pixel-anim --action idle --holds 2,1,1,1 --frame-ms 120
-python3 .cursor/skills/magic-assets/run.py pixel-anim --skip-generate --sheet output/pixel-anim-idle-4-xxx/sheet.png
-python3 .cursor/skills/magic-assets/run.py pixel-anim --snap --sheet output/pixel-anim-idle-4-xxx/sheet.png --skip-generate
-python3 .cursor/skills/magic-assets/run.py test pixel-anim
+python3 magic-assets/run.py pixel-anim --action idle
+python3 magic-assets/run.py pixel-anim --action idle --holds 2,1,1,1 --frame-ms 120
+python3 magic-assets/run.py pixel-anim --skip-generate --sheet output/pixel-anim-idle-4-xxx/sheet.png
+python3 magic-assets/run.py pixel-anim --snap --sheet output/pixel-anim-idle-4-xxx/sheet.png --skip-generate
+python3 magic-assets/run.py test pixel-anim
 ```
 
 ## Brief example
