@@ -101,6 +101,12 @@ def prompt_value(label: str, *, secret: bool = False, default: str = "") -> str:
 
 
 def interactive_config() -> None:
+    if not sys.stdin.isatty():
+        print(
+            "no interactive terminal detected - if an agent is driving, "
+            "ask the user for endpoint/apikey/model_name and write via: "
+            "run.py config --set <field>=<value>"
+        )
     endpoint = prompt_value("[1/3] Image API endpoint")
     if error := endpoint_error(endpoint):
         sys.exit(f"config error: endpoint {error}")

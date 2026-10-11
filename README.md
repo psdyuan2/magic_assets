@@ -81,13 +81,13 @@ cd magic_assets
 python3 -m pip install -r requirements.txt
 ```
 
-Run the interactive configuration wizard:
+Run the interactive configuration wizard (preferred):
 
 ```bash
 python3 skills/magic-assets/run.py config
 ```
 
-Or manually fill in `skills/magic-assets/ma_settings.json`:
+If an agent detects missing configuration, it should launch this wizard for you first. Only if the wizard cannot run interactively should the agent ask you for `endpoint`, `apikey`, and `model_name` and write them with `run.py config --set <field>=<value>`; it must not search directories for a key. You can also manually fill in `skills/magic-assets/ma_settings.json`:
 
 ```json
 {
@@ -195,13 +195,13 @@ cd magic_assets
 python3 -m pip install -r requirements.txt
 ```
 
-推荐运行交互式配置向导：
+推荐优先运行交互式配置向导：
 
 ```bash
 python3 skills/magic-assets/run.py config
 ```
 
-也可以手动填写 `skills/magic-assets/ma_settings.json`：
+如果 agent 检测到配置缺失，应先为你启动这个向导；只有在向导无法交互时，才在对话中询问 `endpoint`、`apikey`、`model_name` 并用 `run.py config --set <field>=<value>` 写入。agent 不得自行到目录里搜 key。也可以手动填写 `skills/magic-assets/ma_settings.json`：
 
 ```json
 {

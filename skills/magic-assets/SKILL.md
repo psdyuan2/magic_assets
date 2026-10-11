@@ -36,7 +36,11 @@ Prompts stay path-specific. Guide-box crop, chroma key, trim, naming, `manifest.
 
 ## Workflow
 
-0. Before any raster path (`grid`, `pixel`, `pixel-anim`, or `mixed`), run `python3 skills/magic-assets/run.py config --check`. If it exits `1`, do **not** search directories for a key. Ask the user in the conversation for `endpoint`, `apikey`, and `model_name`, write them with `python3 skills/magic-assets/run.py config --set <field>=<value>`, then continue. The FX path needs no image2 configuration.
+0. Before any raster path (`grid`, `pixel`, `pixel-anim`, or `mixed`), run `python3 skills/magic-assets/run.py config --check`. If it exits `1`, use this priority:
+   a) **First choice:** directly run `python3 skills/magic-assets/run.py config` for the user in a terminal. This interactive wizard lets the user enter values step by step and masks the key. Wait for the user to finish before continuing.
+   b) **Fallback:** if the wizard fails or cannot run interactively (non-TTY, immediate exit, or `config canceled`), ask the user in the conversation for `endpoint`, `apikey`, and `model_name`; write them with `python3 skills/magic-assets/run.py config --set <field>=<value>`, then continue.
+   c) Never search directories for a key.
+   The FX path needs no image2 configuration.
 1. Read the current page/component and any `DESIGN.md`.
 2. List only the missing motion or rasters. Write names, style, and destination paths. Optional: save them as a JSON brief and pass `--brief`.
 3. Pick fx, grid, pixel, pixel-anim, or mixed. Do not combine raster paths in one request. FX may wrap a finished raster.
