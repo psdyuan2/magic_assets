@@ -1,0 +1,9 @@
+{
+  "name": "magic-assets",
+  "description": "Generates production UI raster assets with Packy GPT-Image-2, or writes CSS/JS script FX when motion does not need new pixels. Cuts sheets into transparent PNGs, crisp pixel SVGs, or 4-frame pixel animation cycles. Prefer script FX for pulse, bob, shake, flash, fade, filter, and mask. Prefer equal-scale icon sheets (4/8/16). Use mixed-scale sheets only when one hero asset and smaller accessories must share a style. Use the pixel path for static retro sprites. Use pixel-anim for looping pixel cycles (idle/walk/bounce). Use when a web or app UI needs custom stylized icons, pixel icons, pixel GIFs, CSS motion, product-hero-plus-glyphs, chroma-key sprite sheets, or when CSS/SVG cannot cover the look.",
+  "skills": "./skills",
+  "version": "1.0.0",
+  "author": {
+    "name": "psdyuan2"
+  }
+}

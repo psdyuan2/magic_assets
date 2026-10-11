@@ -67,13 +67,21 @@ Using Magic Assets is straightforward.
 
 ## Quick start
 
+### Install the skill
+
+```bash
+npx skills add psdyuan2/magic_assets --skill magic-assets -g
+```
+
+### Or clone this repository
+
 ```bash
 git clone <this-repo>
-cd magic_asset
+cd magic_assets
 python3 -m pip install -r requirements.txt
 ```
 
-Fill in `magic-assets/ma_settings.json`:
+Fill in `skills/magic-assets/ma_settings.json`:
 
 ```json
 {
@@ -83,11 +91,18 @@ Fill in `magic-assets/ma_settings.json`:
 }
 ```
 
+### Claude Code plugin
+
+```text
+/plugin marketplace add psdyuan2/magic_assets
+/plugin install magic-assets@magic-assets-marketplace
+```
+
 ## Notes
 
 A **brief** is a small JSON job: names, style, frames, effect ids. Sesame Shop’s briefs live in [`example_web_design/briefs/`](example_web_design/briefs/). Scratch jobs can sit in repo-root `briefs/` (gitignored).
 
-The agent reads [`magic-assets/SKILL.md`](magic-assets/SKILL.md). When you install into another project, copy **that folder only** — not this README, not the demo.
+The agent reads [`skills/magic-assets/SKILL.md`](skills/magic-assets/SKILL.md). When you install into another project, copy **that folder only** — not this README, not the demo.
 
 ## What’s next
 
@@ -160,13 +175,21 @@ Magic Assets的使用也很简单！
 
 ## 快速开始
 
+### 安装 skill
+
+```bash
+npx skills add psdyuan2/magic_assets --skill magic-assets -g
+```
+
+### 或者克隆仓库
+
 ```bash
 git clone <this-repo>
-cd magic_asset
+cd magic_assets
 python3 -m pip install -r requirements.txt
 ```
 
-填写 `magic-assets/ma_settings.json`：
+填写 `skills/magic-assets/ma_settings.json`：
 
 ```json
 {
@@ -176,11 +199,18 @@ python3 -m pip install -r requirements.txt
 }
 ```
 
+### Claude Code 用户
+
+```text
+/plugin marketplace add psdyuan2/magic_assets
+/plugin install magic-assets@magic-assets-marketplace
+```
+
 # 一些补充
 
 **Brief** 是一份小 JSON：名字、风格、帧、动效 id。芝麻铺的 brief 在 [`example_web_design/briefs/`](example_web_design/briefs/)。你自己的临时任务可以丢在仓库根的 `briefs/`（已 gitignore）。
 
-Agent 读的是 [`magic-assets/SKILL.md`](magic-assets/SKILL.md)。拷到别的项目时 **只拷这个文件夹**，不要把 README 和演示站一起带走。
+Agent 读的是 [`skills/magic-assets/SKILL.md`](skills/magic-assets/SKILL.md)。拷到别的项目时 **只拷这个文件夹**，不要把 README 和演示站一起带走。
 
 ## 下一步的计划
 

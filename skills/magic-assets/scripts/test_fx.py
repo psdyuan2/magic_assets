@@ -36,7 +36,12 @@ class ScriptFxTests(unittest.TestCase):
         self.assertTrue((SKILL_ROOT / "references" / "fx.md").exists())
         self.assertNotEqual(PROJECT_ROOT, SKILL_ROOT)
         self.assertEqual(SETTINGS_PATH, SKILL_ROOT / "ma_settings.json")
-        self.assertTrue((PROJECT_ROOT / ".git").exists() or PROJECT_ROOT == SKILL_ROOT.parents[2])
+        if SKILL_ROOT.parents[1].name == ".agents":
+            self.assertEqual(PROJECT_ROOT, SKILL_ROOT.parents[2])
+        else:
+            self.assertTrue(
+                (PROJECT_ROOT / ".git").exists() or PROJECT_ROOT == SKILL_ROOT.parents[2]
+            )
 
     def test_catalog_covers_five_families(self) -> None:
         families = {effect.family for effect in EFFECTS.values()}
