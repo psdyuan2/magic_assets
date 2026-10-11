@@ -84,7 +84,11 @@ def load_settings() -> tuple[str, str, str]:
         if not value
     ]
     if missing:
-        sys.exit(f"missing {', '.join(missing)} in {SETTINGS_PATH.name}")
+        sys.exit(
+            f"missing {', '.join(missing)} in {SETTINGS_PATH.name}. "
+            "Run: python3 skills/magic-assets/run.py config  (interactive) "
+            "or config --set <field>=<value>  (non-interactive)"
+        )
     return api_key, endpoint, model_name
 
 

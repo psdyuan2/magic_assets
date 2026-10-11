@@ -81,7 +81,13 @@ cd magic_assets
 python3 -m pip install -r requirements.txt
 ```
 
-Fill in `skills/magic-assets/ma_settings.json`:
+Run the interactive configuration wizard:
+
+```bash
+python3 skills/magic-assets/run.py config
+```
+
+Or manually fill in `skills/magic-assets/ma_settings.json`:
 
 ```json
 {
@@ -189,7 +195,13 @@ cd magic_assets
 python3 -m pip install -r requirements.txt
 ```
 
-填写 `skills/magic-assets/ma_settings.json`：
+推荐运行交互式配置向导：
+
+```bash
+python3 skills/magic-assets/run.py config
+```
+
+也可以手动填写 `skills/magic-assets/ma_settings.json`：
 
 ```json
 {

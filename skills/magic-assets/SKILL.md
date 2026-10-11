@@ -36,6 +36,7 @@ Prompts stay path-specific. Guide-box crop, chroma key, trim, naming, `manifest.
 
 ## Workflow
 
+0. Before any raster path (`grid`, `pixel`, `pixel-anim`, or `mixed`), run `python3 skills/magic-assets/run.py config --check`. If it exits `1`, do **not** search directories for a key. Ask the user in the conversation for `endpoint`, `apikey`, and `model_name`, write them with `python3 skills/magic-assets/run.py config --set <field>=<value>`, then continue. The FX path needs no image2 configuration.
 1. Read the current page/component and any `DESIGN.md`.
 2. List only the missing motion or rasters. Write names, style, and destination paths. Optional: save them as a JSON brief and pass `--brief`.
 3. Pick fx, grid, pixel, pixel-anim, or mixed. Do not combine raster paths in one request. FX may wrap a finished raster.
@@ -59,6 +60,9 @@ Prompts stay path-specific. Guide-box crop, chroma key, trim, naming, `manifest.
 Always run from the host project root. After copying this folder into an app, replace `skills/magic-assets/` with `.cursor/skills/magic-assets/`.
 
 ```bash
+python3 skills/magic-assets/run.py config
+python3 skills/magic-assets/run.py config --set endpoint=https://example.invalid/v1 --set apikey=your-key
+python3 skills/magic-assets/run.py config --check
 python3 skills/magic-assets/run.py fx --effects pulse,bob,flash,pop
 python3 skills/magic-assets/run.py grid --count 8 --names home,search,user,settings,bell,chart,folder,plus
 python3 skills/magic-assets/run.py pixel --count 4 --colors 12

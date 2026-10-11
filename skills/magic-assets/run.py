@@ -12,6 +12,7 @@ SCRIPTS = Path(__file__).resolve().parent / "scripts"
 if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 
+from config_cmd import main as config_main
 from generate_fx import main as fx_main
 from generate_grid import main as grid_main
 from generate_mixed import main as mixed_main
@@ -19,7 +20,7 @@ from generate_pixel import main as pixel_main
 from generate_pixel_anim import main as pixel_anim_main
 
 
-COMMANDS = ("fx", "grid", "pixel", "pixel-anim", "mixed", "test")
+COMMANDS = ("config", "fx", "grid", "pixel", "pixel-anim", "mixed", "test")
 TESTS = {
     "fx": "test_fx.py",
     "pixel": "test_pixelize.py",
@@ -59,7 +60,9 @@ def main(argv: list[str] | None = None) -> None:
             sys.exit(f"unknown test '{unknown[0]}'. known: {', '.join(TESTS)}")
         run_tests(selected)
         return
-    if command == "fx":
+    if command == "config":
+        config_main(rest)
+    elif command == "fx":
         fx_main(rest)
     elif command == "grid":
         grid_main(rest)
